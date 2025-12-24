@@ -6,137 +6,120 @@
 <title>FastSub – خدمات رقمية</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Tahoma,Arial}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Cairo,Arial}
 body{
-  background:radial-gradient(circle at top,#0f172a,#020617);
-  color:#e5e7eb;
+  background:#f8fafc;
+  color:#0f172a;
   line-height:1.7;
 }
 a{text-decoration:none}
 
-.section{padding:60px 20px;max-width:1100px;margin:auto}
+.section{max-width:1100px;margin:auto;padding:40px 20px}
 
 /* HERO */
 .hero{
   text-align:center;
-  padding:80px 20px;
-  animation:fadeHero 1.2s ease forwards;
+  padding:70px 20px;
+  background:linear-gradient(180deg,#ffffff,#f1f5f9);
 }
 .hero h1{
-  font-size:3rem;
-  color:#22c55e;
+  font-size:2.6rem;
+  color:#16a34a;
 }
 .hero p{
-  margin-top:15px;
-  color:#cbd5f5;
-}
-@keyframes fadeHero{
-  from{opacity:0;transform:translateY(20px)}
-  to{opacity:1;transform:none}
+  margin-top:12px;
+  color:#334155;
 }
 
-/* TRUST BAR */
-.trust-bar{
-  opacity:0;
-  transform:translateY(30px);
-  transition:.7s ease;
+/* TRUST + STATS (COMPACT) */
+.trust-line{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:18px;
+  background:#ffffff;
+  padding:14px 18px;
+  border-radius:14px;
+  box-shadow:0 10px 25px rgba(0,0,0,.06);
+  font-size:.9rem;
 }
-.trust-bar.show{opacity:1;transform:none}
-.trust-box{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-  gap:20px;
-  background:#fff;
-  color:#0f172a;
-  padding:25px;
-  border-radius:22px;
-  text-align:center;
-  box-shadow:0 20px 40px rgba(0,0,0,.25)
+.trust-line span{
+  white-space:nowrap;
+  color:#166534;
+  font-weight:600;
 }
 
 /* SERVICES */
 .services{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
 }
 .card{
-  background:#020617;
-  border-radius:26px;
-  padding:40px 30px;
+  background:#ffffff;
+  border-radius:18px;
+  padding:26px 20px;
   text-align:center;
-  box-shadow:0 25px 60px rgba(0,0,0,.5);
+  box-shadow:0 15px 35px rgba(0,0,0,.07);
 }
-.fade-card{
-  opacity:0;
-  transform:translateY(30px);
-  transition:.7s ease;
-}
-.fade-card.show{opacity:1;transform:none}
 .card img{
-  width:70px;
-  margin-bottom:15px;
+  width:60px;
+  margin-bottom:12px;
 }
-.card h3{margin-bottom:10px}
-.card p{color:#94a3b8;font-size:.9rem}
+.card h3{
+  margin-bottom:8px;
+}
+.card p{
+  color:#475569;
+  font-size:.9rem;
+}
 .btn{
-  margin-top:20px;
+  margin-top:14px;
   display:inline-block;
-  padding:14px 34px;
-  background:linear-gradient(90deg,#22c55e,#4ade80);
+  padding:10px 26px;
+  background:#22c55e;
   color:#022c22;
   border-radius:999px;
   font-weight:700;
-}
-
-/* STATS */
-.stats{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-  gap:20px;
-  background:#fff;
-  color:#166534;
-  padding:35px;
-  border-radius:22px;
-  text-align:center;
-  box-shadow:0 20px 40px rgba(0,0,0,.25);
-  font-weight:700;
-}
-.stats span{
-  font-size:2.2rem;
-  display:block;
+  font-size:.9rem;
 }
 
 /* FAQ */
 .faq{
-  background:#fff;
-  color:#0f172a;
-  padding:40px;
-  border-radius:26px;
-  box-shadow:0 25px 50px rgba(0,0,0,.25)
+  background:#ffffff;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 15px 35px rgba(0,0,0,.07);
 }
-.faq h2{text-align:center;color:#16a34a;margin-bottom:30px}
-.faq p{margin-bottom:20px}
+.faq h2{
+  text-align:center;
+  color:#16a34a;
+  margin-bottom:20px;
+}
+.faq p{
+  margin-bottom:14px;
+  font-size:.9rem;
+}
 
 /* FOOTER */
 footer{
   text-align:center;
-  padding:40px 20px;
-  font-size:.8rem;
-  color:#94a3b8;
+  padding:30px 15px;
+  font-size:.75rem;
+  color:#64748b;
 }
 
 /* WHATSAPP */
 .wa-fixed{
   position:fixed;
-  bottom:20px;
-  left:20px;
+  bottom:18px;
+  left:18px;
   background:#25d366;
   color:#022c22;
-  padding:16px 22px;
+  padding:12px 18px;
   border-radius:999px;
   font-weight:700;
-  box-shadow:0 10px 25px rgba(0,0,0,.4)
+  box-shadow:0 8px 20px rgba(0,0,0,.2)
 }
 </style>
 </head>
@@ -147,28 +130,18 @@ footer{
 <section class="hero">
   <h1>FastSub</h1>
   <p>
-    منصتك الموثوقة للخدمات الرقمية<br>
-    شحن ألعاب • تحويلات خارجية • عملات رقمية<br>
-    تواصل مباشر • تنفيذ سريع • أسعار حسب الصرف
+    خدمات رقمية موثوقة<br>
+    شحن ألعاب • اشتراكات • تحويلات خارجية • عملات رقمية
   </p>
 </section>
 
-<!-- TRUST BAR -->
-<section class="section trust-bar">
-  <div class="trust-box">
-    <div>⚡<br><strong>تنفيذ سريع</strong></div>
-    <div>💬<br><strong>تواصل مباشر</strong></div>
-    <div>🔒<br><strong>تعامل آمن</strong></div>
-    <div>🌍<br><strong>خدمة لعدة دول</strong></div>
-  </div>
-</section>
-
-<!-- STATS -->
+<!-- TRUST BAR (SMALL & HORIZONTAL) -->
 <section class="section">
-  <div class="stats">
-    <div><span data-count="120">0</span>+ طلب</div>
-    <div><span data-count="24">0</span> ساعة</div>
-    <div><span data-count="100">0</span>% دعم</div>
+  <div class="trust-line">
+    <span>⚡ تنفيذ سريع</span>
+    <span>💬 تواصل مباشر</span>
+    <span>🔒 تعامل آمن</span>
+    <span>📦 +120 عملية</span>
   </div>
 </section>
 
@@ -176,21 +149,21 @@ footer{
 <section class="section">
   <div class="services">
 
-    <div class="card fade-card">
+    <div class="card">
       <img src="https://cdn-icons-png.flaticon.com/512/888/888857.png">
       <h3>شحن ألعاب</h3>
       <p>شحن شدات ببجي وجميع الألعاب</p>
       <a class="btn" onclick="order('شحن ألعاب')">اطلب الآن</a>
     </div>
 
-    <div class="card fade-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/681/681494.png">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3050/3050525.png">
       <h3>تحويلات خارجية</h3>
       <p>دفع رسوم وتحويلات دولية</p>
       <a class="btn" onclick="order('تحويلات خارجية')">اطلب الآن</a>
     </div>
 
-    <div class="card fade-card">
+    <div class="card">
       <img src="https://cdn-icons-png.flaticon.com/512/5968/5968260.png">
       <h3>عملات رقمية</h3>
       <p>شراء وبيع USDT و BTC</p>
@@ -207,56 +180,25 @@ footer{
     <p><strong>كم مدة التنفيذ؟</strong><br>غالبًا يتم التنفيذ خلال وقت قصير بعد التأكيد.</p>
     <p><strong>كيف يتم الدفع؟</strong><br>يتم الاتفاق عبر واتساب حسب الخدمة.</p>
     <p><strong>هل الطلب آمن؟</strong><br>لا نطلب كلمات مرور أو رموز.</p>
-    <p><strong>هل الخدمة متاحة لكل الدول؟</strong><br>حسب نوع الطلب.</p>
   </div>
 </section>
 
 <footer>
 FastSub – خدمات رقمية<br>
-<span>FastSub وسيط خدمات رقمية ولا يتحمل إساءة الاستخدام</span>
+FastSub وسيط خدمات رقمية ولا يتحمل إساءة الاستخدام
 </footer>
 
-<a class="wa-fixed" onclick="order('استفسار عام')">WhatsApp</a>
+<a class="wa-fixed" onclick="order('استفسار عام')">واتساب</a>
 
 <script>
-/* TRUST BAR */
-const trustBar=document.querySelector('.trust-bar');
-window.addEventListener('scroll',()=>{
- if(trustBar.getBoundingClientRect().top<window.innerHeight-80){
-  trustBar.classList.add('show');
- }
-});
-
-/* CARDS */
-const cards=document.querySelectorAll('.fade-card');
-window.addEventListener('scroll',()=>{
- cards.forEach((c,i)=>{
-  if(c.getBoundingClientRect().top<window.innerHeight-50){
-   setTimeout(()=>c.classList.add('show'),i*120);
-  }
- });
-});
-
-/* STATS */
-const counters=document.querySelectorAll('[data-count]');
-let started=false;
-window.addEventListener('scroll',()=>{
- const s=document.querySelector('.stats');
- if(!s||started)return;
- if(s.getBoundingClientRect().top<window.innerHeight-80){
-  started=true;
-  counters.forEach(c=>{
-   let t=+c.dataset.count,n=0,step=Math.ceil(t/40);
-   const u=()=>{n+=step;n>=t?c.textContent=t:(c.textContent=n,requestAnimationFrame(u))};
-   u();
-  });
- }
-});
-
-/* WHATSAPP */
-function order(name){
- const msg=`مرحبًا، أريد طلب خدمة: ${name}`;
- window.open(`https://wa.me/201223871232?text=${encodeURIComponent(msg)}`);
+function order(service){
+  const msg =
+    "السلام عليكم 👋\n\n" +
+    "الخدمة: " + service + "\n" +
+    "الدولة:\n" +
+    "التفاصيل:\n\n" +
+    "بانتظار ردكم، شكراً";
+  window.open("https://wa.me/201223871232?text="+encodeURIComponent(msg));
 }
 </script>
 

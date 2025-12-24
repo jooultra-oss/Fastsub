@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>FastSub – Financial Services</title>
+<title>FastSub – Digital Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -21,36 +21,44 @@ body{
   min-height:100vh;
 }
 
-/* HEADER */
-header{
-  padding:60px 20px 40px;
+/* HERO */
+.hero{
+  padding:90px 20px 70px;
   text-align:center;
+  background:
+    linear-gradient(to bottom, rgba(2,6,23,.85), rgba(2,6,23,.95)),
+    url("https://images.unsplash.com/photo-1621761191319-c6fb62004040");
+  background-size:cover;
+  background-position:center;
 }
-header h1{
-  font-size:2.4rem;
+.hero h1{
+  font-size:3rem;
   background:linear-gradient(90deg,#22c55e,#4ade80);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
-header p{
-  margin-top:12px;
-  color:#9ca3af;
+.hero p{
+  max-width:700px;
+  margin:18px auto 0;
+  line-height:1.8;
+  color:#d1d5db;
+  font-size:1.05rem;
 }
 
 /* SECTION */
 .section{
-  max-width:1100px;
+  max-width:1200px;
   margin:auto;
-  padding:40px 20px;
+  padding:60px 20px;
 }
-.cards{
+.products{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:28px;
 }
 
 /* CARD */
-.card{
+.product{
   background:rgba(15,23,42,.85);
   backdrop-filter:blur(14px);
   border-radius:26px;
@@ -59,13 +67,14 @@ header p{
   box-shadow:0 35px 80px rgba(0,0,0,.75);
   transition:.35s;
 }
-.card:hover{
+.product:hover{
   transform:translateY(-8px);
 }
 
-.card img{
+.product img{
   width:90px;
   height:90px;
+  object-fit:contain;
   background:#000;
   border-radius:22px;
   padding:14px;
@@ -73,10 +82,25 @@ header p{
   box-shadow:0 0 28px rgba(34,197,94,.4);
 }
 
-.card h3{color:#fff;margin-bottom:6px}
-.en{font-size:.9rem;color:#9ca3af}
-.ar{font-size:.9rem;color:#cbd5f5;direction:rtl;margin:6px 0 14px}
-.note{font-size:.8rem;color:#6b7280;margin-bottom:18px}
+.product h3{
+  color:#fff;
+  margin-bottom:6px;
+}
+.en{
+  font-size:.9rem;
+  color:#9ca3af;
+}
+.ar{
+  font-size:.95rem;
+  color:#cbd5f5;
+  direction:rtl;
+  margin:6px 0 14px;
+}
+.note{
+  font-size:.8rem;
+  color:#6b7280;
+  margin-bottom:18px;
+}
 
 /* BUTTON */
 .btn{
@@ -87,14 +111,11 @@ header p{
   border-radius:999px;
   font-weight:600;
   text-decoration:none;
+  transition:.25s;
 }
-
-/* BACK */
-.back{
-  display:inline-block;
-  margin-top:30px;
-  color:#22c55e;
-  text-decoration:none;
+.btn:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 35px rgba(34,197,94,.65);
 }
 
 /* WHATSAPP */
@@ -107,52 +128,89 @@ header p{
   padding:16px 22px;
   border-radius:999px;
   font-weight:700;
+  box-shadow:0 20px 40px rgba(0,0,0,.7);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px 20px;
+  font-size:.8rem;
+  color:#6b7280;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Financial Services</h1>
+<!-- HERO / BANNER -->
+<section class="hero">
+  <h1>FastSub</h1>
   <p>
-    Payments • Transfers • Crypto<br>
-    خدمات مالية • تحويلات • عملات رقمية
+    A trusted platform for digital services, subscriptions, game top-ups,  
+    external payments, and cryptocurrencies.<br>
+    <strong>منصة موثوقة للخدمات الرقمية، الاشتراكات، شحن الألعاب، التحويلات الخارجية والعملات الرقمية</strong>
   </p>
-</header>
+</section>
 
+<!-- PRODUCTS -->
 <section class="section">
-<div class="cards">
+<div class="products">
+
+<!-- PUBG -->
+<div class="product">
+  <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png">
+  <h3>PUBG UC Top-Up</h3>
+  <div class="en">Game charging & UC packages</div>
+  <div class="ar">شحن شدات ببجي – تفعيل سريع</div>
+  <div class="note">Price depends on exchange rate</div>
+  <a class="btn" href="https://wa.me/201223871232?text=Hello%20FastSub%20%F0%9F%91%8B%0AService:%20PUBG%20UC%20Top-Up%0ACountry:%0ADetails:">
+    Order
+  </a>
+</div>
+
+<!-- SUBSCRIPTIONS -->
+<div class="product">
+  <img src="https://cdn-icons-png.flaticon.com/512/869/869636.png">
+  <h3>Digital Subscriptions</h3>
+  <div class="en">Streaming & premium services</div>
+  <div class="ar">اشتراكات رقمية (نتفلكس – سبوتيفاي – وغيرها)</div>
+  <div class="note">Fast & reliable activation</div>
+  <a class="btn" href="https://wa.me/201223871232?text=Hello%20FastSub%20%F0%9F%91%8B%0AService:%20Digital%20Subscriptions%0ACountry:%0ADetails:">
+    Order
+  </a>
+</div>
 
 <!-- EXTERNAL PAYMENTS -->
-<div class="card">
+<div class="product">
   <img src="https://cdn-icons-png.flaticon.com/512/3050/3050525.png">
   <h3>External Payments</h3>
-  <div class="en">Fees & International Payments</div>
-  <div class="ar">دفع رسوم خارجية / تحويلات</div>
-  <div class="note">Price depends on exchange rate</div>
+  <div class="en">International fees & online payments</div>
+  <div class="ar">دفع رسوم خارجية – تحويلات دولية</div>
+  <div class="note">Available upon request</div>
   <a class="btn" href="https://wa.me/201223871232?text=Hello%20FastSub%20%F0%9F%91%8B%0AService:%20External%20Payments%0ACountry:%0ADetails:">
     Order
   </a>
 </div>
 
 <!-- CRYPTO -->
-<div class="card">
+<div class="product">
   <img src="https://cdn-icons-png.flaticon.com/512/5968/5968260.png">
   <h3>Cryptocurrency</h3>
-  <div class="en">Buy & Sell Digital Assets</div>
-  <div class="ar">شراء / بيع عملات رقمية</div>
-  <div class="note">USDT • BTC • Others</div>
-  <a class="btn" href="https://wa.me/201223871232?text=Hello%20FastSub%20%F0%9F%91%8B%0AService:%20Crypto%0ACountry:%0ADetails:">
+  <div class="en">Buy & sell digital assets</div>
+  <div class="ar">شراء وبيع العملات الرقمية</div>
+  <div class="note">USDT • BTC • Other coins</div>
+  <a class="btn" href="https://wa.me/201223871232?text=Hello%20FastSub%20%F0%9F%91%8B%0AService:%20Cryptocurrency%0ACountry:%0ADetails:">
     Order
   </a>
 </div>
 
 </div>
-
-<a class="back" href="index.html">← Back to main page</a>
-
 </section>
+
+<footer>
+FastSub – Digital Services Platform
+</footer>
 
 <a class="wa-fixed" href="https://wa.me/201223871232">WhatsApp</a>
 

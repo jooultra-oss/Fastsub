@@ -1,108 +1,129 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>FastSub – خدمات رقمية</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<title>FastSub – خدمات رقمية</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:Tahoma,Arial}
 body{
-  font-family:'Cairo',sans-serif;
-  direction:rtl;
-  color:#0f172a;
-  background:
-    radial-gradient(circle at top, #d1fae5, transparent 60%),
-    linear-gradient(180deg,#f8fafc,#e0f2fe);
-  min-height:100vh;
+  background:radial-gradient(circle at top,#0f172a,#020617);
+  color:#e5e7eb;
+  line-height:1.7;
 }
+a{text-decoration:none}
+
+.section{padding:60px 20px;max-width:1100px;margin:auto}
 
 /* HERO */
 .hero{
-  padding:90px 20px 70px;
   text-align:center;
-  background:
-    linear-gradient(180deg,rgba(255,255,255,.85),rgba(255,255,255,.95)),
-    radial-gradient(circle at center,#22c55e,#3b82f6);
+  padding:80px 20px;
+  animation:fadeHero 1.2s ease forwards;
 }
 .hero h1{
   font-size:3rem;
-  color:#16a34a;
+  color:#22c55e;
 }
 .hero p{
-  max-width:700px;
-  margin:18px auto 0;
-  line-height:1.9;
-  font-size:1.1rem;
-  color:#1e293b;
+  margin-top:15px;
+  color:#cbd5f5;
+}
+@keyframes fadeHero{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:none}
 }
 
-/* SECTION */
-.section{
-  max-width:1200px;
-  margin:auto;
-  padding:60px 20px;
+/* TRUST BAR */
+.trust-bar{
+  opacity:0;
+  transform:translateY(30px);
+  transition:.7s ease;
 }
-.products{
+.trust-bar.show{opacity:1;transform:none}
+.trust-box{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:20px;
+  background:#fff;
+  color:#0f172a;
+  padding:25px;
+  border-radius:22px;
+  text-align:center;
+  box-shadow:0 20px 40px rgba(0,0,0,.25)
+}
+
+/* SERVICES */
+.services{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:28px;
+  gap:30px;
 }
-
-/* CARD */
-.product{
-  background:#ffffff;
+.card{
+  background:#020617;
   border-radius:26px;
-  padding:32px;
+  padding:40px 30px;
   text-align:center;
-  box-shadow:0 25px 50px rgba(0,0,0,.08);
-  transition:.3s;
+  box-shadow:0 25px 60px rgba(0,0,0,.5);
 }
-.product:hover{
-  transform:translateY(-6px);
+.fade-card{
+  opacity:0;
+  transform:translateY(30px);
+  transition:.7s ease;
 }
-
-.product img{
-  width:90px;
-  height:90px;
-  object-fit:contain;
-  background:#f1f5f9;
-  border-radius:22px;
-  padding:14px;
-  margin-bottom:18px;
+.fade-card.show{opacity:1;transform:none}
+.card img{
+  width:70px;
+  margin-bottom:15px;
 }
-
-.product h3{
-  color:#0f172a;
-  margin-bottom:10px;
-}
-.desc{
-  color:#334155;
-  font-size:.95rem;
-  margin-bottom:18px;
-}
-.note{
-  font-size:.8rem;
-  color:#64748b;
-  margin-bottom:18px;
-}
-
-/* BUTTON */
+.card h3{margin-bottom:10px}
+.card p{color:#94a3b8;font-size:.9rem}
 .btn{
+  margin-top:20px;
   display:inline-block;
+  padding:14px 34px;
   background:linear-gradient(90deg,#22c55e,#4ade80);
   color:#022c22;
-  padding:14px 34px;
   border-radius:999px;
   font-weight:700;
-  text-decoration:none;
-  transition:.25s;
 }
-.btn:hover{
-  transform:scale(1.05);
+
+/* STATS */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:20px;
+  background:#fff;
+  color:#166534;
+  padding:35px;
+  border-radius:22px;
+  text-align:center;
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+  font-weight:700;
+}
+.stats span{
+  font-size:2.2rem;
+  display:block;
+}
+
+/* FAQ */
+.faq{
+  background:#fff;
+  color:#0f172a;
+  padding:40px;
+  border-radius:26px;
+  box-shadow:0 25px 50px rgba(0,0,0,.25)
+}
+.faq h2{text-align:center;color:#16a34a;margin-bottom:30px}
+.faq p{margin-bottom:20px}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px 20px;
+  font-size:.8rem;
+  color:#94a3b8;
 }
 
 /* WHATSAPP */
@@ -110,98 +131,132 @@ body{
   position:fixed;
   bottom:20px;
   left:20px;
-  background:#25D366;
+  background:#25d366;
   color:#022c22;
   padding:16px 22px;
   border-radius:999px;
   font-weight:700;
-  box-shadow:0 10px 25px rgba(0,0,0,.2);
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:40px 20px;
-  font-size:.8rem;
-  color:#475569;
+  box-shadow:0 10px 25px rgba(0,0,0,.4)
 }
 </style>
 </head>
 
 <body>
 
-<!-- BANNER -->
+<!-- HERO -->
 <section class="hero">
   <h1>FastSub</h1>
   <p>
-    منصتك الموثوقة للخدمات الرقمية  
-    <br>
-    شحن ألعاب – اشتراكات – تحويلات خارجية – عملات رقمية  
-    <br>
-    تنفيذ سريع • تواصل مباشر • أسعار حسب الصرف
+    منصتك الموثوقة للخدمات الرقمية<br>
+    شحن ألعاب • تحويلات خارجية • عملات رقمية<br>
+    تواصل مباشر • تنفيذ سريع • أسعار حسب الصرف
   </p>
 </section>
 
-<!-- PRODUCTS -->
+<!-- TRUST BAR -->
+<section class="section trust-bar">
+  <div class="trust-box">
+    <div>⚡<br><strong>تنفيذ سريع</strong></div>
+    <div>💬<br><strong>تواصل مباشر</strong></div>
+    <div>🔒<br><strong>تعامل آمن</strong></div>
+    <div>🌍<br><strong>خدمة لعدة دول</strong></div>
+  </div>
+</section>
+
+<!-- STATS -->
 <section class="section">
-<div class="products">
+  <div class="stats">
+    <div><span data-count="120">0</span>+ طلب</div>
+    <div><span data-count="24">0</span> ساعة</div>
+    <div><span data-count="100">0</span>% دعم</div>
+  </div>
+</section>
 
-<!-- PUBG -->
-<div class="product">
-  <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png">
-  <h3>شحن شدات ببجي</h3>
-  <div class="desc">شحن UC لجميع السيرفرات</div>
-  <div class="note">السعر يحدد حسب سعر الصرف</div>
-  <a class="btn" onclick="orderWhatsApp('شحن شدات ببجي')">اطلب الآن</a>
-</div>
+<!-- SERVICES -->
+<section class="section">
+  <div class="services">
 
-<!-- SUBSCRIPTIONS -->
-<div class="product">
-  <img src="https://cdn-icons-png.flaticon.com/512/869/869636.png">
-  <h3>اشتراكات رقمية</h3>
-  <div class="desc">نتفلكس – سبوتيفاي – خدمات رقمية</div>
-  <div class="note">تفعيل فوري بعد الدفع</div>
-  <a class="btn" onclick="orderWhatsApp('اشتراكات رقمية')">اطلب الآن</a>
-</div>
+    <div class="card fade-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/888/888857.png">
+      <h3>شحن ألعاب</h3>
+      <p>شحن شدات ببجي وجميع الألعاب</p>
+      <a class="btn" onclick="order('شحن ألعاب')">اطلب الآن</a>
+    </div>
 
-<!-- EXTERNAL PAYMENTS -->
-<div class="product">
-  <img src="https://cdn-icons-png.flaticon.com/512/3050/3050525.png">
-  <h3>دفع رسوم خارجية</h3>
-  <div class="desc">تحويلات ورسوم دولية</div>
-  <div class="note">متاح حسب الطلب</div>
-  <a class="btn" onclick="orderWhatsApp('دفع رسوم خارجية')">اطلب الآن</a>
-</div>
+    <div class="card fade-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/681/681494.png">
+      <h3>تحويلات خارجية</h3>
+      <p>دفع رسوم وتحويلات دولية</p>
+      <a class="btn" onclick="order('تحويلات خارجية')">اطلب الآن</a>
+    </div>
 
-<!-- CRYPTO -->
-<div class="product">
-  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968260.png">
-  <h3>عملات رقمية</h3>
-  <div class="desc">شراء وبيع العملات الرقمية</div>
-  <div class="note">USDT – BTC – وغيرها</div>
-  <a class="btn" onclick="orderWhatsApp('عملات رقمية')">اطلب الآن</a>
-</div>
+    <div class="card fade-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968260.png">
+      <h3>عملات رقمية</h3>
+      <p>شراء وبيع USDT و BTC</p>
+      <a class="btn" onclick="order('عملات رقمية')">اطلب الآن</a>
+    </div>
 
-</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="faq">
+    <h2>الأسئلة الشائعة</h2>
+    <p><strong>كم مدة التنفيذ؟</strong><br>غالبًا يتم التنفيذ خلال وقت قصير بعد التأكيد.</p>
+    <p><strong>كيف يتم الدفع؟</strong><br>يتم الاتفاق عبر واتساب حسب الخدمة.</p>
+    <p><strong>هل الطلب آمن؟</strong><br>لا نطلب كلمات مرور أو رموز.</p>
+    <p><strong>هل الخدمة متاحة لكل الدول؟</strong><br>حسب نوع الطلب.</p>
+  </div>
 </section>
 
 <footer>
-FastSub – خدمات رقمية
+FastSub – خدمات رقمية<br>
+<span>FastSub وسيط خدمات رقمية ولا يتحمل إساءة الاستخدام</span>
 </footer>
 
-<a class="wa-fixed" onclick="orderWhatsApp('استفسار عام')">واتساب</a>
+<a class="wa-fixed" onclick="order('استفسار عام')">WhatsApp</a>
 
 <script>
-function orderWhatsApp(service){
-  const msg =
-    "السلام عليكم 👋\n\n" +
-    "الخدمة: " + service + "\n" +
-    "الدولة:\n" +
-    "التفاصيل:\n\n" +
-    "بانتظار ردكم، شكراً";
+/* TRUST BAR */
+const trustBar=document.querySelector('.trust-bar');
+window.addEventListener('scroll',()=>{
+ if(trustBar.getBoundingClientRect().top<window.innerHeight-80){
+  trustBar.classList.add('show');
+ }
+});
 
-  const url = "https://wa.me/201223871232?text=" + encodeURIComponent(msg);
-  window.open(url, "_blank");
+/* CARDS */
+const cards=document.querySelectorAll('.fade-card');
+window.addEventListener('scroll',()=>{
+ cards.forEach((c,i)=>{
+  if(c.getBoundingClientRect().top<window.innerHeight-50){
+   setTimeout(()=>c.classList.add('show'),i*120);
+  }
+ });
+});
+
+/* STATS */
+const counters=document.querySelectorAll('[data-count]');
+let started=false;
+window.addEventListener('scroll',()=>{
+ const s=document.querySelector('.stats');
+ if(!s||started)return;
+ if(s.getBoundingClientRect().top<window.innerHeight-80){
+  started=true;
+  counters.forEach(c=>{
+   let t=+c.dataset.count,n=0,step=Math.ceil(t/40);
+   const u=()=>{n+=step;n>=t?c.textContent=t:(c.textContent=n,requestAnimationFrame(u))};
+   u();
+  });
+ }
+});
+
+/* WHATSAPP */
+function order(name){
+ const msg=`مرحبًا، أريد طلب خدمة: ${name}`;
+ window.open(`https://wa.me/201223871232?text=${encodeURIComponent(msg)}`);
 }
 </script>
 

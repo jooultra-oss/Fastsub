@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>FastSub – خدمات رقمية</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Cairo',sans-serif;
+  direction:rtl;
+  color:#0f172a;
+  background:
+    radial-gradient(circle at top, #d1fae5, transparent 60%),
+    linear-gradient(180deg,#f8fafc,#e0f2fe);
+  min-height:100vh;
+}
+
+/* HERO */
+.hero{
+  padding:90px 20px 70px;
+  text-align:center;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.85),rgba(255,255,255,.95)),
+    radial-gradient(circle at center,#22c55e,#3b82f6);
+}
+.hero h1{
+  font-size:3rem;
+  color:#16a34a;
+}
+.hero p{
+  max-width:700px;
+  margin:18px auto 0;
+  line-height:1.9;
+  font-size:1.1rem;
+  color:#1e293b;
+}
+
+/* SECTION */
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 20px;
+}
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+
+/* CARD */
+.product{
+  background:#ffffff;
+  border-radius:26px;
+  padding:32px;
+  text-align:center;
+  box-shadow:0 25px 50px rgba(0,0,0,.08);
+  transition:.3s;
+}
+.product:hover{
+  transform:translateY(-6px);
+}
+
+.product img{
+  width:90px;
+  height:90px;
+  object-fit:contain;
+  background:#f1f5f9;
+  border-radius:22px;
+  padding:14px;
+  margin-bottom:18px;
+}
+
+.product h3{
+  color:#0f172a;
+  margin-bottom:10px;
+}
+.desc{
+  color:#334155;
+  font-size:.95rem;
+  margin-bottom:18px;
+}
+.note{
+  font-size:.8rem;
+  color:#64748b;
+  margin-bottom:18px;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  background:linear-gradient(90deg,#22c55e,#4ade80);
+  color:#022c22;
+  padding:14px 34px;
+  border-radius:999px;
+  font-weight:700;
+  text-decoration:none;
+  transition:.25s;
+}
+.btn:hover{
+  transform:scale(1.05);
+}
+
+/* WHATSAPP */
+.wa-fixed{
+  position:fixed;
+  bottom:20px;
+  left:20px;
+  background:#25D366;
+  color:#022c22;
+  padding:16px 22px;
+  border-radius:999px;
+  font-weight:700;
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px 20px;
+  font-size:.8rem;
+  color:#475569;
+}
+</style>
+</head>
+
+<body>
+
+<!-- BANNER -->
+<section class="hero">
+  <h1>FastSub</h1>
+  <p>
+    منصتك الموثوقة للخدمات الرقمية  
+    <br>
+    شحن ألعاب – اشتراكات – تحويلات خارجية – عملات رقمية  
+    <br>
+    تنفيذ سريع • تواصل مباشر • أسعار حسب الصرف
+  </p>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section">
+<div class="products">
+
+<!-- PUBG -->
+<div class="product">
+  <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png">
+  <h3>شحن شدات ببجي</h3>
+  <div class="desc">شحن UC لجميع السيرفرات</div>
+  <div class="note">السعر يحدد حسب سعر الصرف</div>
+  <a class="btn" onclick="orderWhatsApp('شحن شدات ببجي')">اطلب الآن</a>
+</div>
+
+<!-- SUBSCRIPTIONS -->
+<div class="product">
+  <img src="https://cdn-icons-png.flaticon.com/512/869/869636.png">
+  <h3>اشتراكات رقمية</h3>
+  <div class="desc">نتفلكس – سبوتيفاي – خدمات رقمية</div>
+  <div class="note">تفعيل فوري بعد الدفع</div>
+  <a class="btn" onclick="orderWhatsApp('اشتراكات رقمية')">اطلب الآن</a>
+</div>
+
+<!-- EXTERNAL PAYMENTS -->
+<div class="product">
+  <img src="https://cdn-icons-png.flaticon.com/512/3050/3050525.png">
+  <h3>دفع رسوم خارجية</h3>
+  <div class="desc">تحويلات ورسوم دولية</div>
+  <div class="note">متاح حسب الطلب</div>
+  <a class="btn" onclick="orderWhatsApp('دفع رسوم خارجية')">اطلب الآن</a>
+</div>
+
+<!-- CRYPTO -->
+<div class="product">
+  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968260.png">
+  <h3>عملات رقمية</h3>
+  <div class="desc">شراء وبيع العملات الرقمية</div>
+  <div class="note">USDT – BTC – وغيرها</div>
+  <a class="btn" onclick="orderWhatsApp('عملات رقمية')">اطلب الآن</a>
+</div>
+
+</div>
+</section>
+
+<footer>
+FastSub – خدمات رقمية
+</footer>
+
+<a class="wa-fixed" onclick="orderWhatsApp('استفسار عام')">واتساب</a>
+
+<script>
+function orderWhatsApp(service){
+  const msg =
+    "السلام عليكم 👋\n\n" +
+    "الخدمة: " + service + "\n" +
+    "الدولة:\n" +
+    "التفاصيل:\n\n" +
+    "بانتظار ردكم، شكراً";
+
+  const url = "https://wa.me/201223871232?text=" + encodeURIComponent(msg);
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>

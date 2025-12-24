@@ -9,7 +9,6 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-
 body{
   font-family:Inter,sans-serif;
   color:#e5e7eb;
@@ -21,183 +20,141 @@ body{
   min-height:100vh;
 }
 
-/* HEADER */
-header{
-  padding:70px 20px 50px;
-  text-align:center;
+/* LANGUAGE SWITCH */
+.lang-switch{
+  position:fixed;
+  top:18px;
+  right:18px;
+  background:rgba(15,23,42,.9);
+  border-radius:999px;
+  padding:8px 14px;
+  font-size:.8rem;
+  cursor:pointer;
+  z-index:99;
 }
+
+/* HEADER */
+header{text-align:center;padding:70px 20px 50px}
 header h1{
   font-size:2.7rem;
-  font-weight:700;
   background:linear-gradient(90deg,#22c55e,#4ade80);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
-header p{
-  margin-top:14px;
-  color:#9ca3af;
-  line-height:1.6;
-}
+header p{margin-top:14px;color:#9ca3af}
 
 /* SECTION */
-.section{
-  max-width:1200px;
-  margin:auto;
-  padding:40px 20px;
-}
+.section{max-width:1200px;margin:auto;padding:40px 20px}
 .products{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:28px;
 }
 
-/* PRODUCT CARD */
+/* CARD */
 .product{
   background:rgba(15,23,42,.85);
-  backdrop-filter:blur(14px);
   border-radius:26px;
   padding:32px;
   text-align:center;
   box-shadow:0 35px 80px rgba(0,0,0,.75);
-  transition:.35s;
+  opacity:0;
+  transform:translateY(40px);
+  transition:.6s;
 }
-.product:hover{
-  transform:translateY(-10px) scale(1.02);
-  box-shadow:0 45px 100px rgba(0,0,0,.9);
-}
+.product.show{opacity:1;transform:none}
 
-/* ICON / IMAGE */
 .product img{
-  width:90px;
-  height:90px;
-  object-fit:contain;
-  background:radial-gradient(circle,#020617,#000);
-  border-radius:22px;
-  padding:14px;
-  margin-bottom:18px;
-  box-shadow:0 0 28px rgba(34,197,94,.4);
+  width:90px;height:90px;
+  background:#000;border-radius:22px;
+  padding:14px;margin-bottom:18px;
 }
+.en{color:#9ca3af;font-size:.9rem}
+.ar{color:#cbd5f5;font-size:.9rem;direction:rtl;margin:6px 0 14px}
+.note{font-size:.8rem;color:#6b7280;margin-bottom:18px}
 
-.product h3{
-  color:#fff;
-  margin-bottom:6px;
-}
-.en{
-  font-size:.9rem;
-  color:#9ca3af;
-}
-.ar{
-  font-size:.9rem;
-  color:#cbd5f5;
-  direction:rtl;
-  margin:6px 0 14px;
-}
-.note{
-  font-size:.8rem;
-  color:#6b7280;
-  margin-bottom:18px;
-}
-
-/* BUTTON */
 .btn{
-  display:inline-block;
   background:linear-gradient(90deg,#22c55e,#4ade80);
-  color:#000;
-  padding:14px 34px;
+  color:#000;padding:14px 34px;
   border-radius:999px;
-  font-weight:600;
-  text-decoration:none;
-  transition:.25s;
-}
-.btn:hover{
-  transform:scale(1.08);
-  box-shadow:0 0 35px rgba(34,197,94,.65);
+  font-weight:600;text-decoration:none;
 }
 
-/* WHATSAPP FLOAT */
+/* WHATSAPP */
 .wa-fixed{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:#000;
-  padding:16px 22px;
-  border-radius:999px;
+  position:fixed;bottom:20px;right:20px;
+  background:#25D366;color:#000;
+  padding:16px 22px;border-radius:999px;
   font-weight:700;
-  box-shadow:0 20px 40px rgba(0,0,0,.7);
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:40px 20px;
-  font-size:.8rem;
-  color:#6b7280;
 }
 </style>
 </head>
 
 <body>
 
+<div class="lang-switch" onclick="toggleLang()">AR | EN</div>
+
 <header>
   <h1>FastSub</h1>
-  <p>
-    Digital Services & Subscriptions<br>
-    خدمات رقمية • تفعيل سريع • تواصل مباشر
-  </p>
+  <p class="en">Digital Services & Subscriptions</p>
+  <p class="ar">خدمات رقمية • تفعيل سريع • تواصل مباشر</p>
 </header>
 
 <section class="section">
 <div class="products">
 
-<!-- PUBG -->
 <div class="product">
-  <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="PUBG">
-  <h3>Game Top-Up</h3>
-  <div class="en">PUBG UC Charging</div>
-  <div class="ar">شحن ألعاب – شدات ببجي</div>
-  <div class="note">Price depends on exchange rate</div>
-  <a class="btn" href="https://wa.me/201223871232">Order</a>
+<img src="https://cdn-icons-png.flaticon.com/512/888/888879.png">
+<h3>Game Top-Up</h3>
+<div class="en">PUBG UC Charging</div>
+<div class="ar">شحن ألعاب – شدات ببجي</div>
+<div class="note">Price depends on exchange rate</div>
+<a class="btn" href="https://wa.me/201223871232">Order</a>
 </div>
 
-<!-- EXTERNAL PAYMENTS -->
 <div class="product">
-  <img src="https://cdn-icons-png.flaticon.com/512/3050/3050525.png" alt="Payments">
-  <h3>External Payments</h3>
-  <div class="en">Fees & Online Payments</div>
-  <div class="ar">دفع رسوم خارجية / تحويلات</div>
-  <div class="note">Available on request</div>
-  <a class="btn" href="https://wa.me/201223871232">Order</a>
+<img src="https://cdn-icons-png.flaticon.com/512/3050/3050525.png">
+<h3>External Payments</h3>
+<div class="en">Fees & Online Payments</div>
+<div class="ar">دفع رسوم خارجية / تحويلات</div>
+<div class="note">Available on request</div>
+<a class="btn" href="https://wa.me/201223871232">Order</a>
 </div>
 
-<!-- CRYPTO -->
 <div class="product">
-  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968260.png" alt="Crypto">
-  <h3>Cryptocurrency</h3>
-  <div class="en">Buy Digital Assets</div>
-  <div class="ar">شراء عملات رقمية</div>
-  <div class="note">USDT • BTC • Others</div>
-  <a class="btn" href="https://wa.me/201223871232">Order</a>
-</div>
-
-<!-- SUBSCRIPTIONS -->
-<div class="product">
-  <img src="https://cdn-icons-png.flaticon.com/512/869/869636.png" alt="Subscriptions">
-  <h3>Subscriptions</h3>
-  <div class="en">Streaming & Digital Services</div>
-  <div class="ar">اشتراكات رقمية</div>
-  <div class="note">Fast activation</div>
-  <a class="btn" href="https://wa.me/201223871232">Order</a>
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968260.png">
+<h3>Cryptocurrency</h3>
+<div class="en">Buy Digital Assets</div>
+<div class="ar">شراء عملات رقمية</div>
+<div class="note">USDT • BTC • Others</div>
+<a class="btn" href="https://wa.me/201223871232">Order</a>
 </div>
 
 </div>
 </section>
 
-<footer>
-FastSub is a digital services intermediary.
-</footer>
-
 <a class="wa-fixed" href="https://wa.me/201223871232">WhatsApp</a>
+
+<script>
+/* LANGUAGE TOGGLE */
+let lang="en";
+function toggleLang(){
+  lang=lang==="en"?"ar":"en";
+  document.querySelectorAll(".en").forEach(e=>e.style.display=lang==="en"?"block":"none");
+  document.querySelectorAll(".ar").forEach(e=>e.style.display=lang==="ar"?"block":"none");
+}
+
+/* SCROLL ANIMATION */
+const cards=document.querySelectorAll(".product");
+window.addEventListener("scroll",()=>{
+  cards.forEach(card=>{
+    if(card.getBoundingClientRect().top < window.innerHeight-80){
+      card.classList.add("show");
+    }
+  });
+});
+toggleLang();
+</script>
 
 </body>
 </html>

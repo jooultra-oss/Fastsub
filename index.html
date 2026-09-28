@@ -1,151 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FastSub – خدمات رقمية</title>
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Cairo,Arial}
-body{background:#f8fafc;color:#0f172a;line-height:1.7}
-a{text-decoration:none}
-.section{max-width:1100px;margin:auto;padding:40px 20px}
-
-/* HERO */
-.hero{text-align:center;padding:70px 20px;background:linear-gradient(180deg,#fff,#f1f5f9)}
-.hero h1{font-size:2.6rem;color:#16a34a}
-.hero p{margin-top:12px;color:#334155}
-
-/* TRUST */
-.trust-line{
- display:flex;flex-wrap:wrap;justify-content:center;gap:18px;
- background:#fff;padding:14px 18px;border-radius:14px;
- box-shadow:0 10px 25px rgba(0,0,0,.06);font-size:.9rem}
-.trust-line span{white-space:nowrap;color:#166534;font-weight:600}
-
-/* SERVICES */
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
-.card{
- background:#fff;border-radius:18px;padding:26px 20px;text-align:center;
- box-shadow:0 15px 35px rgba(0,0,0,.07)}
-.card img{width:60px;margin-bottom:12px}
-.card h3{margin-bottom:8px}
-.card p{color:#475569;font-size:.9rem}
-.btn{
- margin-top:14px;display:inline-block;padding:10px 26px;
- background:#22c55e;color:#022c22;border-radius:999px;
- font-weight:700;font-size:.9rem}
-
-/* FAQ */
-.faq{background:#fff;padding:30px;border-radius:18px;box-shadow:0 15px 35px rgba(0,0,0,.07)}
-.faq h2{text-align:center;color:#16a34a;margin-bottom:20px}
-.faq p{margin-bottom:14px;font-size:.9rem}
-
-/* FOOTER */
-footer{text-align:center;padding:30px 15px;font-size:.75rem;color:#64748b}
-
-/* WHATSAPP */
-.wa-fixed{
- position:fixed;bottom:18px;left:18px;background:#25d366;color:#022c22;
- padding:12px 18px;border-radius:999px;font-weight:700;
- box-shadow:0 8px 20px rgba(0,0,0,.2)}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0a1020">
+  <meta name="description" content="FastSub — خدمات رقمية، شحن ألعاب واشتراكات بطلب مباشر عبر واتساب.">
+  <title>FastSub | متجرك للخدمات الرقمية</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
+    :root{font-family:Cairo,Arial,sans-serif;color:#e9effa;background:#080e1b;scroll-behavior:smooth}
+    *{box-sizing:border-box}body{margin:0}button,input{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}
+    .wrap{width:min(1180px,calc(100% - 36px));margin:auto}.topbar{background:#121d30;color:#9db4ce;text-align:center;padding:7px 15px;font-size:12px}
+    header{position:sticky;top:0;z-index:20;background:rgba(8,14,27,.91);backdrop-filter:blur(18px);border-bottom:1px solid #253047}
+    .nav{min-height:72px;display:flex;align-items:center;gap:25px}.logo{font-size:26px;font-weight:900;letter-spacing:-1.5px}.logo span{color:#49e0bd}.navlinks{display:flex;gap:25px;color:#aebed1;font-size:14px;margin-inline:auto}.navlinks a:hover{color:white}
+    .nav-actions{display:flex;gap:9px}.iconbtn,.outline{background:#132039;color:#e9effa;border:1px solid #30415c;border-radius:12px;padding:9px 14px;font-weight:700}.cartbtn{background:#42dab1;color:#09251f;border:0;border-radius:12px;padding:9px 14px;font-weight:800}.cartbtn b{background:#0b5246;color:white;padding:1px 7px;border-radius:20px;margin-inline-start:5px}
+    .hero{position:relative;overflow:hidden;background:radial-gradient(circle at 80% 15%,#1a665b 0,transparent 35%),radial-gradient(circle at 25% 75%,#193e65 0,transparent 35%),#0b1324;border-bottom:1px solid #1e3345}.hero:before{content:"";position:absolute;inset:0;opacity:.24;background-image:linear-gradient(#4d809022 1px,transparent 1px),linear-gradient(90deg,#4d809022 1px,transparent 1px);background-size:42px 42px}
+    .hero-inner{position:relative;min-height:470px;display:grid;grid-template-columns:1.18fr .82fr;gap:40px;align-items:center;padding-block:70px}.eyebrow{color:#55e2be;font-size:13px;font-weight:800;letter-spacing:1px}.hero h1{font-size:clamp(37px,5vw,67px);line-height:1.22;margin:14px 0 18px;letter-spacing:-2px}.hero h1 em{font-style:normal;color:#59e5c2}.hero p{color:#b6c4d4;font-size:16px;line-height:1.9;max-width:610px}.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.primary{background:#4be0b8;color:#06291f;border:0;padding:13px 23px;border-radius:13px;font-weight:900;box-shadow:0 12px 35px #2ccba63b}.secondary{border:1px solid #607287;background:#ffffff0b;padding:12px 22px;border-radius:13px;font-weight:800}.hero-note{color:#8fa6b8;font-size:12px;margin-top:19px}.hero-art{height:315px;display:grid;place-items:center;position:relative}.orbit{width:285px;height:285px;border:1px solid #5df2cf55;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 0 35px #48dcb10b,0 0 0 70px #48dcb108}.orbit>div{width:185px;height:185px;border-radius:36px;background:linear-gradient(145deg,#266f70,#13294a);box-shadow:0 25px 70px #0008,inset 0 1px #ffffff50;display:grid;place-items:center;font-size:80px;font-weight:900;letter-spacing:-10px}.orbit span{color:#5ef0c9}.bubble{position:absolute;background:#182b43;border:1px solid #446980;border-radius:17px;padding:12px 17px;font-size:13px;box-shadow:0 20px 45px #0005}.b1{top:19px;right:0}.b2{bottom:20px;left:0}.b3{right:20px;bottom:4px;color:#5ee5c2}
+    .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;padding-block:23px}.trust div{background:#111b2d;border:1px solid #24364b;border-radius:16px;padding:16px 20px;display:flex;gap:13px;align-items:center}.trust strong{font-size:14px}.trust small{display:block;color:#95a7bb;font-size:12px}.trust .symbol{font-size:24px}
+    section.catalog{padding:50px 0 70px}.sectiontop{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:25px}.sectiontop h2,.how h2,.faq h2{font-size:32px;line-height:1.3;margin:8px 0}.sectiontop p{color:#9baec1;margin:0}.search{background:#111c2f;border:1px solid #304159;border-radius:12px;padding:12px 15px;color:white;min-width:260px;outline:none}.search:focus{border-color:#4be0b8}
+    .filters{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:24px}.filter{background:#121e30;border:1px solid #2a3c52;color:#aebfd1;border-radius:99px;padding:8px 19px;font-weight:700;font-size:13px}.filter.active{background:#42dab1;color:#07291f;border-color:#42dab1}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#121d30;border:1px solid #293c50;border-radius:21px;overflow:hidden;transition:transform .2s,border-color .2s}.card:hover{transform:translateY(-4px);border-color:#4bcda9}.visual{height:165px;position:relative;display:grid;place-items:center;background:linear-gradient(130deg,var(--a),var(--b));overflow:hidden}.visual:before,.visual:after{content:"";position:absolute;width:200px;height:200px;border:1px solid #ffffff20;border-radius:50%}.visual:before{top:-110px;left:-45px}.visual:after{bottom:-125px;right:-30px}.visual strong{position:relative;font-size:42px;letter-spacing:-2px;color:white;text-shadow:0 10px 30px #0007}.visual .badge{position:absolute;top:14px;right:15px;background:#07132299;border:1px solid #ffffff35;border-radius:7px;padding:4px 10px;font-size:11px;font-weight:800;color:white}.card-body{padding:19px}.category{color:#58dfbb;font-size:11px;font-weight:800}.card h3{font-size:19px;margin:5px 0 5px}.card p{color:#a8b9c9;font-size:13px;line-height:1.8;min-height:47px;margin:0 0 17px}.card-bottom{border-top:1px solid #293950;padding-top:15px;display:flex;align-items:center;justify-content:space-between;gap:8px}.price small{display:block;font-size:11px;color:#8fa6bb}.price strong{font-size:14px;color:#f0f6ff}.add{background:#42dab1;color:#06261e;border:0;border-radius:10px;padding:9px 15px;font-weight:900;font-size:12px}.empty{color:#aebacb;padding:30px;grid-column:1/-1}
+    .how{background:#101a2b;padding:70px 0}.howgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:25px}.step{border:1px solid #2a3c53;border-radius:18px;padding:24px}.step b{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:11px;color:#092a22;background:#49e1b9}.step h3{margin-bottom:5px}.step p{margin:0;color:#a1b3c4;font-size:13px;line-height:1.8}.faq{padding:65px 0}.faq details{border-bottom:1px solid #2c3a4c;padding:17px 3px;color:#dfeaf4}.faq summary{cursor:pointer;font-weight:800}.faq p{color:#9fb2c4;font-size:14px;line-height:1.9}.faq small{color:#a2b6c7}footer{border-top:1px solid #26354a;padding:30px 0;color:#8da2b6;font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .overlay{position:fixed;inset:0;background:#010816b9;z-index:40;display:none}.overlay.open{display:block}.drawer{position:fixed;z-index:41;top:0;bottom:0;left:0;width:min(450px,100%);background:#111c2d;box-shadow:20px 0 70px #0009;transform:translateX(-105%);transition:transform .22s;display:flex;flex-direction:column;padding:24px}.drawer.open{transform:translateX(0)}.drawer-head{display:flex;align-items:center;justify-content:space-between}.drawer h2{margin:0}.close{background:transparent;color:white;border:0;font-size:28px}.items{overflow:auto;flex:1;padding-top:25px}.cart-item{border:1px solid #2d4058;border-radius:13px;padding:14px;margin-bottom:11px}.cart-item strong{display:block}.cart-item small{color:#9fb3c4}.cart-item button{float:left;background:none;color:#ffaca8;border:0;font-size:12px}.checkout{border-top:1px solid #2d3f55;padding-top:18px}.checkout label{display:block;color:#aabbd0;font-size:12px;margin-bottom:6px}.checkout input{width:100%;border:1px solid #36506a;background:#0b1525;border-radius:10px;padding:11px;color:white;margin-bottom:10px}.checkout button{width:100%;padding:13px;background:#42dab1;color:#092920;border:0;border-radius:11px;font-weight:900}.checkout button:disabled{opacity:.5;cursor:not-allowed}.checkout small{display:block;color:#93a8bb;line-height:1.7;margin-top:9px}.toast{position:fixed;z-index:60;bottom:20px;right:20px;background:#45dfb7;color:#063125;padding:10px 17px;border-radius:10px;box-shadow:0 12px 40px #0008;display:none;font-weight:800;font-size:13px}
+    @media(max-width:850px){.navlinks{display:none}.nav{justify-content:space-between}.hero-inner{grid-template-columns:1fr;padding-block:55px}.hero-art{display:none}.grid{grid-template-columns:repeat(2,1fr)}.trust{grid-template-columns:1fr 1fr}.howgrid{grid-template-columns:1fr 1fr}}
+    @media(max-width:570px){.wrap{width:min(100% - 28px,1180px)}.topbar{font-size:10px}.nav{min-height:62px}.logo{font-size:23px}.iconbtn,.cartbtn{padding:8px 10px;font-size:12px}.hero-inner{min-height:340px;padding-block:45px}.hero h1{font-size:39px}.hero p{font-size:14px}.trust,.grid,.howgrid{grid-template-columns:1fr}.trust{gap:9px}.trust div{padding:10px 15px}.sectiontop{display:block}.sectiontop h2{font-size:27px}.search{width:100%;margin-top:18px}.visual{height:150px}.foot{display:block}.foot p{line-height:1.8}}
+  </style>
 </head>
-
 <body>
-
-<section class="hero">
-<h1>FastSub</h1>
-<p>خدمات رقمية موثوقة<br>
-شحن ألعاب • اشتراكات رقمية • تحويلات خارجية • عملات رقمية</p>
-</section>
-
-<section class="section">
-<div class="trust-line">
-<span>⚡ تنفيذ سريع</span>
-<span>💬 تواصل مباشر</span>
-<span>🔒 تعامل آمن</span>
-<span>📦 +120 عملية</span>
-</div>
-</section>
-
-<section class="section">
-<div class="services">
-
-<div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/888/888857.png">
-<h3>شحن ألعاب</h3>
-<p>شحن شدات ببجي وجميع الألعاب</p>
-<a class="btn" onclick="order('شحن ألعاب')">اطلب الآن</a>
-</div>
-
-<div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/869/869636.png">
-<h3>اشتراكات رقمية</h3>
-<p>نتفلكس – سبوتيفاي – وغيرها</p>
-<a class="btn" onclick="order('اشتراكات رقمية')">اطلب الآن</a>
-</div>
-
-<div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/3050/3050525.png">
-<h3>تحويلات خارجية</h3>
-<p>دفع رسوم وتحويلات دولية</p>
-<a class="btn" onclick="order('تحويلات خارجية')">اطلب الآن</a>
-</div>
-
-<div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/5968/5968260.png">
-<h3>عملات رقمية</h3>
-<p>شراء وبيع USDT و BTC</p>
-<a class="btn" onclick="order('عملات رقمية')">اطلب الآن</a>
-</div>
-
-<!-- STARLINK (PNG ثابت) -->
-<div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png">
-<h3>اشتراك Starlink</h3>
-<p>تفعيل وتجديد ستارلينك حسب الدولة</p>
-<a class="btn" onclick="order('اشتراك Starlink')">اطلب الآن</a>
-</div>
-
-<!-- BEIN SPORTS (PNG ثابت) -->
-<div class="card">
-<img src="https://cdn-icons-png.flaticon.com/512/2504/2504929.png">
-<h3>اشتراك beIN Sports</h3>
-<p>جميع باقات beIN الرياضية</p>
-<a class="btn" onclick="order('اشتراك beIN Sports')">اطلب الآن</a>
-</div>
-
-</div>
-</section>
-
-<section class="section">
-<div class="faq">
-<h2>الأسئلة الشائعة</h2>
-<p><strong>كم مدة التنفيذ؟</strong><br>غالبًا يتم التنفيذ خلال وقت قصير بعد التأكيد.</p>
-<p><strong>كيف يتم الدفع؟</strong><br>يتم الاتفاق عبر واتساب حسب الخدمة.</p>
-<p><strong>هل الطلب آمن؟</strong><br>لا نطلب كلمات مرور أو رموز.</p>
-</div>
-</section>
-
-<footer>
-FastSub – خدمات رقمية<br>
-FastSub وسيط خدمات رقمية ولا يتحمل إساءة الاستخدام
-</footer>
-
-<a class="wa-fixed" onclick="order('استفسار عام')">واتساب</a>
-
-<script>
-function order(service){
- const msg =
- "السلام عليكم 👋\n\n"+
- "الخدمة: "+service+"\n"+
- "الدولة:\n"+
- "التفاصيل:\n\n"+
- "بانتظار ردكم، شكراً";
- window.open("https://wa.me/201223871232?text="+encodeURIComponent(msg));
-}
-</script>
-
+  <div class="topbar" data-i18n="top">اطلب الخدمة المناسبة لك، وسنؤكد السعر والتفاصيل عبر واتساب قبل التنفيذ</div>
+  <header><div class="wrap nav"><a class="logo" href="#home">Fast<span>Sub</span></a><nav class="navlinks"><a href="#products" data-i18n="navProducts">المنتجات</a><a href="#how" data-i18n="navHow">كيف تطلب؟</a><a href="#faq" data-i18n="navFaq">الأسئلة الشائعة</a></nav><div class="nav-actions"><button class="iconbtn" id="lang" aria-label="Switch language">EN</button><button class="cartbtn" id="cartOpen"><span data-i18n="cart">السلة</span> <b id="count">0</b></button></div></div></header>
+  <main>
+    <section class="hero" id="home"><div class="wrap hero-inner"><div><span class="eyebrow" data-i18n="eyebrow">FASTSUB · DIGITAL SERVICES</span><h1 data-i18n-html="heroTitle">عالمك الرقمي،<br><em>بطريقة أسهل.</em></h1><p data-i18n="heroText">شحن ألعاب، اشتراكات وخدمات رقمية في مكان واحد. اختر ما تحتاجه وأرسل طلبك مباشرة عبر واتساب.</p><div class="cta"><a class="primary" href="#products" data-i18n="browse">تصفح المنتجات ←</a><a class="secondary" id="heroWhatsapp" href="#" target="_blank" rel="noopener" data-i18n="ask">تواصل معنا</a></div><div class="hero-note" data-i18n="heroNote">السعر والتوفر يُؤكدان قبل الدفع · لا نطلب كلمة مرور حسابك</div></div><div class="hero-art" aria-hidden="true"><div class="orbit"><div>F<span>S</span></div></div><div class="bubble b1">⚡ Digital, simplified</div><div class="bubble b2">🎮 Games & more</div><div class="bubble b3">● FastSub</div></div></div></section>
+    <div class="wrap trust"><div><span class="symbol">⚡</span><span><strong data-i18n="trust1">طلب سريع</strong><small data-i18n="trust1b">خطوات واضحة وسهلة</small></span></div><div><span class="symbol">💬</span><span><strong data-i18n="trust2">تواصل مباشر</strong><small data-i18n="trust2b">تأكيد التفاصيل عبر واتساب</small></span></div><div><span class="symbol">🔒</span><span><strong data-i18n="trust3">خصوصيتك مهمة</strong><small data-i18n="trust3b">لا تشارك كلمات المرور أو رموز التحقق</small></span></div></div>
+    <section class="catalog wrap" id="products"><div class="sectiontop"><div><span class="eyebrow" data-i18n="collection">استكشف FASTSUB</span><h2 data-i18n="productsTitle">المنتجات والخدمات</h2><p data-i18n="productsDesc">اختر الخدمة، وأضفها للسلة، ثم أرسل طلبك.</p></div><input class="search" id="search" type="search" placeholder="ابحث عن خدمة..." aria-label="Search products"></div><div class="filters" id="filters"></div><div class="grid" id="grid"></div></section>
+    <section class="how" id="how"><div class="wrap"><span class="eyebrow" data-i18n="simple">بسيطة وواضحة</span><h2 data-i18n="howTitle">كيف تطلب؟</h2><div class="howgrid"><div class="step"><b>1</b><h3 data-i18n="step1">اختر الخدمة</h3><p data-i18n="step1b">تصفح الخدمات وأضف ما تحتاجه للسلة.</p></div><div class="step"><b>2</b><h3 data-i18n="step2">أرسل الطلب</h3><p data-i18n="step2b">تُفتح رسالة واتساب جاهزة بتفاصيل طلبك.</p></div><div class="step"><b>3</b><h3 data-i18n="step3">تأكيد وتنفيذ</h3><p data-i18n="step3b">نتفق على السعر والتوفر وطريقة التنفيذ قبل الدفع.</p></div></div></div></section>
+    <section class="faq wrap" id="faq"><span class="eyebrow">FAQ</span><h2 data-i18n="faqTitle">الأسئلة الشائعة</h2><details><summary data-i18n="q1">هل الأسعار نهائية؟</summary><p data-i18n="a1">السعر حسب الخدمة والدولة والباقات المتاحة. نؤكده لك في واتساب قبل أي دفع.</p></details><details><summary data-i18n="q2">كيف أدفع؟</summary><p data-i18n="a2">نوضح وسائل الدفع المتاحة بعد تأكيد تفاصيل الطلب. لا تدفع قبل الاتفاق النهائي.</p></details><details><summary data-i18n="q3">هل أرسل كلمة المرور أو رمز التحقق؟</summary><p data-i18n="a3">لا. لا ترسل كلمات مرور أو رموز تحقق. نطلب فقط البيانات اللازمة للخدمة بعد توضيحها لك.</p></details><details><summary data-i18n="q4">كم يستغرق التنفيذ؟</summary><p data-i18n="a4">يختلف حسب المنتج والتوفر؛ سنوضح الموعد المتوقع عند تأكيد الطلب.</p></details></section>
+  </main>
+  <footer><div class="wrap foot"><a class="logo" href="#home">Fast<span>Sub</span></a><p data-i18n="footer">© FastSub · المنتجات والتوفر والأسعار تُؤكد قبل الدفع. أسماء العلامات التجارية تخص أصحابها.</p></div></footer>
+  <div class="overlay" id="overlay"></div><aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle"><div class="drawer-head"><h2 id="drawerTitle" data-i18n="cartTitle">طلبك</h2><button class="close" id="cartClose" aria-label="Close">×</button></div><div class="items" id="items"></div><div class="checkout"><label for="country" data-i18n="country">الدولة (اختياري)</label><input id="country" autocomplete="country-name" placeholder="مثال: مصر"><label for="notes" data-i18n="notes">تفاصيل الطلب (اختياري)</label><input id="notes" maxlength="200" placeholder="الباقة، الكمية، أو أي ملاحظة"><button id="send" data-i18n="send">أرسل الطلب عبر واتساب</button><small data-i18n="checkoutNote">سيُفتح واتساب برسالة جاهزة. إرسال الطلب لا يعني الدفع أو تأكيد التوفر.</small></div></aside><div class="toast" id="toast" role="status"></div>
+  <script>
+  const PHONE='201223871232';
+  const products=[
+    {id:'pubg',cat:'games',ar:'شحن شدات PUBG',en:'PUBG UC top-up',dar:'شحن شدات ببجي حسب الكمية والمنطقة المتاحة.',den:'PUBG UC top-up based on quantity and region.',mark:'PUBG',a:'#536e26',b:'#172d20',tag:'الأكثر طلبًا',tagEn:'Popular'},
+    {id:'games',cat:'games',ar:'شحن ألعاب أخرى',en:'Other game top-ups',dar:'اسألنا عن لعبة الشحن والكمية التي تريدها.',den:'Ask us about your game and the amount you need.',mark:'GAME',a:'#3b4a9f',b:'#152145',tag:'ألعاب',tagEn:'Games'},
+    {id:'subs',cat:'subs',ar:'اشتراكات رقمية',en:'Digital subscriptions',dar:'استفسر عن الاشتراك والباقات المتاحة قبل الطلب.',den:'Ask about available subscriptions and plans.',mark:'PLAY',a:'#77445e',b:'#271a34',tag:'اشتراكات',tagEn:'Subscriptions'},
+    {id:'bein',cat:'subs',ar:'اشتراك beIN Sports',en:'beIN Sports subscription',dar:'اسأل عن الباقات الرياضية المتاحة حسب بلدك.',den:'Ask about sports plans available in your country.',mark:'beIN',a:'#682b87',b:'#21143d',tag:'رياضة',tagEn:'Sports'},
+    {id:'starlink',cat:'subs',ar:'اشتراك Starlink',en:'Starlink subscription',dar:'استفسر عن التجديد أو التفعيل حسب الدولة.',den:'Ask about renewal or activation by country.',mark:'✦',a:'#40566c',b:'#111827',tag:'اتصال',tagEn:'Connectivity'},
+    {id:'payments',cat:'other',ar:'دفع رسوم خارجية',en:'International fee payment',dar:'اذكر الجهة والبلد والمبلغ لنراجع إمكانية الخدمة.',den:'Share the provider, country and amount to check availability.',mark:'↗',a:'#136e73',b:'#123045',tag:'حسب التوفر',tagEn:'On request'},
+    {id:'crypto',cat:'other',ar:'استفسار عملات رقمية',en:'Digital currency inquiry',dar:'استفسر عن توفر الخدمة والشروط في بلدك.',den:'Ask about service availability and requirements in your country.',mark:'₿',a:'#98713a',b:'#342719',tag:'حسب التوفر',tagEn:'On request'}
+  ];
+  const copy={ar:{top:'اطلب الخدمة المناسبة لك، وسنؤكد السعر والتفاصيل عبر واتساب قبل التنفيذ',navProducts:'المنتجات',navHow:'كيف تطلب؟',navFaq:'الأسئلة الشائعة',cart:'السلة',eyebrow:'FASTSUB · DIGITAL SERVICES',heroTitle:'عالمك الرقمي،<br><em>بطريقة أسهل.</em>',heroText:'شحن ألعاب، اشتراكات وخدمات رقمية في مكان واحد. اختر ما تحتاجه وأرسل طلبك مباشرة عبر واتساب.',browse:'تصفح المنتجات ←',ask:'تواصل معنا',heroNote:'السعر والتوفر يُؤكدان قبل الدفع · لا نطلب كلمة مرور حسابك',trust1:'طلب سريع',trust1b:'خطوات واضحة وسهلة',trust2:'تواصل مباشر',trust2b:'تأكيد التفاصيل عبر واتساب',trust3:'خصوصيتك مهمة',trust3b:'لا تشارك كلمات المرور أو رموز التحقق',collection:'استكشف FASTSUB',productsTitle:'المنتجات والخدمات',productsDesc:'اختر الخدمة، وأضفها للسلة، ثم أرسل طلبك.',simple:'بسيطة وواضحة',howTitle:'كيف تطلب؟',step1:'اختر الخدمة',step1b:'تصفح الخدمات وأضف ما تحتاجه للسلة.',step2:'أرسل الطلب',step2b:'تُفتح رسالة واتساب جاهزة بتفاصيل طلبك.',step3:'تأكيد وتنفيذ',step3b:'نتفق على السعر والتوفر وطريقة التنفيذ قبل الدفع.',faqTitle:'الأسئلة الشائعة',q1:'هل الأسعار نهائية؟',a1:'السعر حسب الخدمة والدولة والباقات المتاحة. نؤكده لك في واتساب قبل أي دفع.',q2:'كيف أدفع؟',a2:'نوضح وسائل الدفع المتاحة بعد تأكيد تفاصيل الطلب. لا تدفع قبل الاتفاق النهائي.',q3:'هل أرسل كلمة المرور أو رمز التحقق؟',a3:'لا. لا ترسل كلمات مرور أو رموز تحقق. نطلب فقط البيانات اللازمة للخدمة بعد توضيحها لك.',q4:'كم يستغرق التنفيذ؟',a4:'يختلف حسب المنتج والتوفر؛ سنوضح الموعد المتوقع عند تأكيد الطلب.',footer:'© FastSub · المنتجات والتوفر والأسعار تُؤكد قبل الدفع. أسماء العلامات التجارية تخص أصحابها.',cartTitle:'طلبك',country:'الدولة (اختياري)',notes:'تفاصيل الطلب (اختياري)',send:'أرسل الطلب عبر واتساب',checkoutNote:'سيُفتح واتساب برسالة جاهزة. إرسال الطلب لا يعني الدفع أو تأكيد التوفر.',all:'الكل',games:'شحن الألعاب',subs:'الاشتراكات',other:'خدمات أخرى',search:'ابحث عن خدمة...',quote:'السعر بعد التأكيد',add:'أضف للسلة',remove:'حذف',empty:'السلة فارغة. أضف خدمة للبدء.',none:'لا توجد نتائج مطابقة.',added:'أُضيفت للسلة',countryExample:'مثال: مصر',notesExample:'الباقة، الكمية، أو أي ملاحظة'},en:{top:'Choose a service; price and details are confirmed on WhatsApp before fulfillment',navProducts:'Products',navHow:'How it works',navFaq:'FAQ',cart:'Cart',eyebrow:'FASTSUB · DIGITAL SERVICES',heroTitle:'Your digital world,<br><em>made simpler.</em>',heroText:'Game top-ups, subscriptions and digital services in one place. Choose what you need and send your request on WhatsApp.',browse:'Browse products →',ask:'Contact us',heroNote:'Price and availability confirmed before payment · We never ask for your password',trust1:'Easy ordering',trust1b:'Clear, simple steps',trust2:'Direct contact',trust2b:'Confirm details on WhatsApp',trust3:'Your privacy matters',trust3b:'Never share passwords or verification codes',collection:'EXPLORE FASTSUB',productsTitle:'Products & services',productsDesc:'Pick a service, add it to your cart, and send your request.',simple:'SIMPLE & CLEAR',howTitle:'How it works',step1:'Choose a service',step1b:'Browse and add what you need to your cart.',step2:'Send your request',step2b:'WhatsApp opens with your order details ready.',step3:'Confirm & fulfill',step3b:'We agree on price, availability and delivery before payment.',faqTitle:'Frequently asked questions',q1:'Are prices final?',a1:'Prices depend on service, country and available plans. We confirm your price on WhatsApp before payment.',q2:'How do I pay?',a2:'Available payment methods are explained after confirming your order. Do not pay before final agreement.',q3:'Should I share a password or verification code?',a3:'No. Never share passwords or verification codes. We only request necessary service details after explaining them.',q4:'How long does it take?',a4:'Timing depends on product and availability; we give an estimate when confirming your request.',footer:'© FastSub · Products, availability and prices are confirmed before payment. Trademarks belong to their owners.',cartTitle:'Your request',country:'Country (optional)',notes:'Order details (optional)',send:'Send on WhatsApp',checkoutNote:'WhatsApp opens with a prepared message. Sending a request does not mean payment or stock confirmation.',all:'All',games:'Game top-ups',subs:'Subscriptions',other:'Other services',search:'Search services...',quote:'Price on request',add:'Add to cart',remove:'Remove',empty:'Your cart is empty. Add a service to begin.',none:'No matching products.',added:'Added to cart',countryExample:'e.g. Egypt',notesExample:'Plan, quantity or other note'}};
+  let lang='ar',filter='all';let cart=[];try{cart=JSON.parse(localStorage.getItem('fastsub-cart')||'[]').filter(x=>products.some(p=>p.id===x))}catch{}
+  const $=id=>document.getElementById(id);const t=k=>copy[lang][k];const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  function persist(){localStorage.setItem('fastsub-cart',JSON.stringify(cart));$('count').textContent=cart.length;renderCart()}
+  function render(){document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr';document.title=lang==='ar'?'FastSub | متجرك للخدمات الرقمية':'FastSub | Digital services';document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=t(el.dataset.i18n));document.querySelectorAll('[data-i18n-html]').forEach(el=>el.innerHTML=t(el.dataset.i18nHtml));$('lang').textContent=lang==='ar'?'EN':'عربي';$('search').placeholder=t('search');$('country').placeholder=t('countryExample');$('notes').placeholder=t('notesExample');$('filters').innerHTML=['all','games','subs','other'].map(c=>`<button class="filter ${filter===c?'active':''}" data-filter="${c}">${t(c)}</button>`).join('');const q=$('search').value.trim().toLowerCase();const found=products.filter(p=>(filter==='all'||p.cat===filter)&&[p.ar,p.en,p.dar,p.den].some(s=>s.toLowerCase().includes(q)));$('grid').innerHTML=found.length?found.map(p=>`<article class="card"><div class="visual" style="--a:${p.a};--b:${p.b}"><span class="badge">${lang==='ar'?p.tag:p.tagEn}</span><strong>${esc(p.mark)}</strong></div><div class="card-body"><span class="category">${t(p.cat)}</span><h3>${esc(p[lang])}</h3><p>${esc(p[lang==='ar'?'dar':'den'])}</p><div class="card-bottom"><span class="price"><small>${t('quote')}</small><strong>${lang==='ar'?'تواصل للتفاصيل':'Ask for details'}</strong></span><button class="add" data-add="${p.id}">${t('add')} +</button></div></div></article>`).join(''):`<p class="empty">${t('none')}</p>`;renderCart()}
+  function renderCart(){$('count').textContent=cart.length;$('items').innerHTML=cart.length?cart.map(id=>{const p=products.find(x=>x.id===id);return `<div class="cart-item"><button data-remove="${p.id}">${t('remove')} ×</button><strong>${esc(p[lang])}</strong><small>${t('quote')}</small></div>`}).join(''):`<p style="color:#a6b8ca">${t('empty')}</p>`;$('send').disabled=!cart.length}
+  function toggle(open){$('drawer').classList.toggle('open',open);$('overlay').classList.toggle('open',open);document.body.style.overflow=open?'hidden':'';if(open)$('cartClose').focus()}
+  function wa(message){return 'https://wa.me/'+PHONE+'?text='+encodeURIComponent(message)}
+  $('heroWhatsapp').href=wa('مرحبًا FastSub، أريد الاستفسار عن الخدمات المتاحة.');$('lang').onclick=()=>{lang=lang==='ar'?'en':'ar';render()};$('cartOpen').onclick=()=>toggle(true);$('cartClose').onclick=()=>toggle(false);$('overlay').onclick=()=>toggle(false);document.addEventListener('keydown',e=>{if(e.key==='Escape')toggle(false)});$('filters').onclick=e=>{const b=e.target.closest('[data-filter]');if(b){filter=b.dataset.filter;render()}};$('search').oninput=render;$('grid').onclick=e=>{const b=e.target.closest('[data-add]');if(!b)return;if(!cart.includes(b.dataset.add))cart.push(b.dataset.add);persist();$('toast').textContent=t('added');$('toast').style.display='block';setTimeout(()=>$('toast').style.display='none',1800)};$('items').onclick=e=>{const b=e.target.closest('[data-remove]');if(b){cart=cart.filter(id=>id!==b.dataset.remove);persist()}};$('send').onclick=()=>{if(!cart.length)return;const names=cart.map((id,i)=>`${i+1}. ${products.find(p=>p.id===id).ar}`).join('\n');const country=$('country').value.trim().slice(0,80),notes=$('notes').value.trim().slice(0,200);const message=`السلام عليكم، أريد الاستفسار عن الطلب التالي من FastSub:\n${names}\n${country?'الدولة: '+country+'\n':''}${notes?'التفاصيل: '+notes+'\n':''}أرجو تأكيد السعر والتوفر وطريقة الدفع قبل التنفيذ.`;window.open(wa(message),'_blank','noopener')};render();
+  </script>
 </body>
 </html>
